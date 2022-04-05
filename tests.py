@@ -1,2 +1,0 @@
-print("Sveiki!")
-print("ok")
