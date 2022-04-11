@@ -8,7 +8,7 @@ noteikumi = []
 arr = []
 arr_2 = []
 punkti =0
-uzdevumi = ["Kā saīsināti apzīmē molmasas mērvienību?", "Nosaki grafīta molmasas skaitlisko vērtību!", "Cik protonu ir ķīmiskajam elementam sēram?", "Kurš ķīmiskais elements dabā ir sastopams vienkāršas vielas veidā?(cl, ca, c, mg)", "Vai dotajā vienādojumā ir nepieciešami koeficienti? (Na + S → Na2S) (jā/Nē)", "Kāds ir nosaukums dotajai skābei(H2SO3)?", "Kādu indikatoru visbiežāk izmanto neitralizācijas reakcijās?", "Anjons ir pozitīvi vai negatīvi lādēts jons?", "Kāda ķīmiskā formula ir tvana gāzei?", "Kādā laboratorijas traukā pagatavo sērskābes šķīdumu no ūdens un koncentrētas sērskābes?"]
+uzdevumi = ["Kā saīsināti apzīmē molmasas mērvienību?(g/mol ; g/kmolu ;)", "Nosaki grafīta molmasas skaitlisko vērtību!", "Cik protonu ir ķīmiskajam elementam sēram?", "Kurš ķīmiskais elements dabā ir sastopams vienkāršas vielas veidā?(cl, ca, c, mg)", "Vai dotajā vienādojumā ir nepieciešami koeficienti? (Na + S → Na2S) (jā/Nē)", "Kāds ir nosaukums dotajai skābei(H2SO3)?", "Kādu indikatoru visbiežāk izmanto neitralizācijas reakcijās?", "Anjons ir pozitīvi vai negatīvi lādēts jons?", "Kāda ķīmiskā formula ir tvana gāzei?", "Kādā laboratorijas traukā pagatavo sērskābes šķīdumu no ūdens un koncentrētas sērskābes?"]
 par_atbildes = ["g/kmol", "12", "16", "c", "jā", "sērpaskābe", "fenolftaleīns", "negatīvi", "co", "vārglāze"]
 
 for rinda in z:
