@@ -30,3 +30,47 @@ while True:
         break
 
 start = time.time() # uzņem laiku 
+
+for k in range (reizes):
+    x = random.randrange(0,(len(uzdevumi))) # nosaka random intervālu kādā izvēlēsies vārdu
+    jautajums = uzdevumi[x]
+    atbilde = str(input(jautajums))
+
+    for i in range (1): # jāizpildās vienu rezi
+        z  = [] # izveido sarakstu 
+        for j in range(1): # jāizpildās vienu reizi
+            s = (jautajums, " - jūsu atbilde - ", atbilde)
+            z.append(s) # tai rindai pievieno vārdu 
+        arr.append(z) # basically 2D list darbības 
+    
+    for i in range (1): # jāizpildās vienu rezi
+        z  = [] # izveido sarakstu 
+        for j in range(1): # jāizpildās vienu reizi
+            s = (jautajums, " - pareizā atbilde - ", par_atbildes[x])
+            z.append(s) # tai rindai pievieno vārdu 
+        arr_2.append(z) # basically 2D list darbības 
+        
+    if atbilde == par_atbildes[x]:
+        punkti = punkti+1
+
+stop = time.time() # tiek apturēts laiks    
+print()
+print("Jūsu atbildes:")
+for i in range (reizes):
+    for j in range(1):
+        print(f"{i+1}.jautājums: {arr[i][j]}") # izvada reultātus 2D list veidā
+
+print()
+print("Pareizās atbildes:")
+for i in range (reizes):
+    for j in range(1):
+        print(f"{i+1}.jautājums: {arr_2[i][j]}") # izvada reultātus 2D list veidā
+
+
+print(f"Jūs ieguvāt {punkti} no {reizes} punktiem")
+print("Paldies!")
+f.write("Spēle ir beigusies\n")
+f.write(f"Jūs ieguvāt {punkti} no {reizes} punktiem\n") # izvada rezultātus datnē, kur ir f.write
+print(f"Spēli paveicāt {round(stop-start, 2)} sekundēs") # izvada cik sekundes ir pagājušas
+f.write(f"Spēli paveicāt {round(stop-start, 2)} sekundēs\n")
+f.write("Paldies!\n")
