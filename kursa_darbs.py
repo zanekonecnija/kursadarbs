@@ -2,8 +2,8 @@ print()
 import random
 import time 
 MAPE = 'Faili/' # mape kurā saglabās rezultātus
-f = open(MAPE + "rezultats.txt", "a", encoding="UTF-8") # datne... kur 'append' elementi 
-z = open(MAPE + "noteikumi_2.txt", "r", encoding="UTF-8")
+f = open("rezultats.txt", "a", encoding="UTF-8") # datne... kur 'append' elementi 
+z = open("noteikumi.txt", "r", encoding="UTF-8")
 noteikumi = []
 arr = []
 arr_2 = []
