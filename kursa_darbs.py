@@ -1,6 +1,7 @@
 print()
 import random
 import time 
+import math
 MAPE = 'Faili/' # mape kurā saglabās rezultātus
 f = open("rezultats.txt", "a", encoding="UTF-8") # datne... kur 'append' elementi 
 z = open("noteikumi.txt", "r", encoding="UTF-8")
@@ -11,24 +12,33 @@ punkti =0
 uzdevumi = ["Kā saīsināti apzīmē molmasas mērvienību?(g/mol ; g/kmolu ;)", "Nosaki grafīta molmasas skaitlisko vērtību!", "Cik protonu ir ķīmiskajam elementam sēram?", "Kurš ķīmiskais elements dabā ir sastopams vienkāršas vielas veidā?(cl, ca, c, mg)", "Vai dotajā vienādojumā ir nepieciešami koeficienti? (Na + S → Na2S) (jā/Nē)", "Kāds ir nosaukums dotajai skābei(H2SO3)?", "Kādu indikatoru visbiežāk izmanto neitralizācijas reakcijās?", "Anjons ir pozitīvi vai negatīvi lādēts jons?", "Kāda ķīmiskā formula ir tvana gāzei?", "Kādā laboratorijas traukā pagatavo sērskābes šķīdumu no ūdens un koncentrētas sērskābes?"]
 par_atbildes = ["g/kmol", "12", "16", "c", "jā", "sērpaskābe", "fenolftaleīns", "negatīvi", "co", "vārglāze"]
 
-for rinda in z:
-    noteikumi.append(rinda) # no datnes nolasa spēles noteikumus un pievieno list
+def noteikumu_nolasisana():
+    global noteikumi
+    for rinda in z:
+        noteikumi.append(rinda) # no datnes nolasa spēles noteikumus un pievieno list
 
-for i in range (len(noteikumi)):
-    print(noteikumi[i], end="") # izvada spēles noteikumus
-print()
+def noteikumu_izvade(noteikumi):
+    for i in range (len(noteikumi)):
+        print(noteikumi[i], end="") # izvada spēles noteikumus
+    print()
 
-print("Ja vēlaties beigt spēli tad ierakstiet (beigt) ")
+def reizess():
+    global reizes
+    while True:
+        try:
+            reizes = int(input("Cik uzdevumus vēlieties saņemt: ")) #asks for an integer input from user
+        except ValueError: 
+            print("Nepareizi dati!") #print statement
+            continue
+        if 1 > reizes or 10 < reizes:
+            print("Ievadījāt pārāk lielu/mazu skaitli!")
+            continue
+        else:
+            break
 
-while True:
-    try:
-       reizes = int(input("Cik uzdevumus vēlieties saņemt: ")) #asks for an integer input from user
-    except ValueError: 
-       print("Nepareizi dati!") #print statement
-       continue
-    else:
-        break
-
+noteikumu_nolasisana()
+noteikumu_izvade(noteikumi) # izsauc noteikumu izvades funkciju
+reizess() # izsauc reizess funkciju
 start = time.time() # uzņem laiku 
 
 for k in range (reizes):
