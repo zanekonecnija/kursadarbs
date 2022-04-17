@@ -43,7 +43,8 @@ start = time.time() # uzņem laiku
 
 for k in range (reizes):
     x = random.randrange(0,(len(uzdevumi))) # nosaka random intervālu kādā izvēlēsies vārdu
-    jautajums = uzdevumi[x]
+    jautajums = uzdevumi[x] # str tipa mainīgais 
+    uzdevumi.pop(x) # izņem jautājumu, lai tas vairāk neatkārtotos
     atbilde = str(input(jautajums))
 
     for i in range (1): # jāizpildās vienu rezi
@@ -83,4 +84,5 @@ f.write("Spēle ir beigusies\n")
 f.write(f"Jūs ieguvāt {punkti} no {reizes} punktiem\n") # izvada rezultātus datnē, kur ir f.write
 print(f"Spēli paveicāt {round(stop-start, 2)} sekundēs") # izvada cik sekundes ir pagājušas
 f.write(f"Spēli paveicāt {round(stop-start, 2)} sekundēs\n")
+print(f"Jūsu iegūto punktu skaita {punkti} faktoriāls ir {math.factorial(punkti)} ") # lai būtu izmantota math funkcijas
 f.write("Paldies!\n")

@@ -10,3 +10,7 @@ Spēle ir beigusies
 Jūs ieguvāt 0 no 5 punktiem
 Spēli paveicāt 3.92 sekundēs
 Paldies!
+Spēle ir beigusies
+Jūs ieguvāt 1 no 1 punktiem
+Spēli paveicāt 4.72 sekundēs
+Paldies!
