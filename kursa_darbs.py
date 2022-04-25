@@ -7,10 +7,10 @@ f = open("rezultats.txt", "a", encoding="UTF-8") # datne... kur 'append' element
 z = open("noteikumi.txt", "r", encoding="UTF-8")
 noteikumi = []
 arr = []
-arr_2 = []
 punkti =0
 uzdevumi = ["Kā saīsināti apzīmē molmasas mērvienību?(g/mol ; g/kmolu ;)", "Nosaki grafīta molmasas skaitlisko vērtību!", "Cik protonu ir ķīmiskajam elementam sēram?", "Kurš ķīmiskais elements dabā ir sastopams vienkāršas vielas veidā?(cl, ca, c, mg)", "Vai dotajā vienādojumā ir nepieciešami koeficienti? (Na + S → Na2S) (jā/Nē)", "Kāds ir nosaukums dotajai skābei(H2SO3)?", "Kādu indikatoru visbiežāk izmanto neitralizācijas reakcijās?", "Anjons ir pozitīvi vai negatīvi lādēts jons?", "Kāda ķīmiskā formula ir tvana gāzei?", "Kādā laboratorijas traukā pagatavo sērskābes šķīdumu no ūdens un koncentrētas sērskābes?"]
 par_atbildes = ["g/kmol", "12", "16", "c", "jā", "sērpaskābe", "fenolftaleīns", "negatīvi", "co", "vārglāze"]
+atbilzu_lapas_jaut = uzdevumi.copy()
 
 def noteikumu_nolasisana():
     global noteikumi
@@ -53,13 +53,6 @@ for k in range (reizes):
             s = (jautajums, " - jūsu atbilde - ", atbilde)
             z.append(s) # tai rindai pievieno vārdu 
         arr.append(z) # basically 2D list darbības 
-    
-    for i in range (1): # jāizpildās vienu rezi
-        z  = [] # izveido sarakstu 
-        for j in range(1): # jāizpildās vienu reizi
-            s = (jautajums, " - pareizā atbilde - ", par_atbildes[x])
-            z.append(s) # tai rindai pievieno vārdu 
-        arr_2.append(z) # basically 2D list darbības 
         
     if atbilde == par_atbildes[x]:
         punkti = punkti+1
@@ -72,12 +65,11 @@ for i in range (reizes):
         print(f"{i+1}.jautājums: {arr[i][j]}") # izvada reultātus 2D list veidā
 
 print()
-print("Pareizās atbildes:")
-for i in range (reizes):
-    for j in range(1):
-        print(f"{i+1}.jautājums: {arr_2[i][j]}") # izvada reultātus 2D list veidā
+print("Atbilžu lapa:")
+for i in range (len(atbilzu_lapas_jaut)):
+    print(f"{atbilzu_lapas_jaut[i]} pareizā atbilde - {par_atbildes[i]}")
 
-
+print()
 print(f"Jūs ieguvāt {punkti} no {reizes} punktiem")
 print("Paldies!")
 f.write("Spēle ir beigusies\n")
