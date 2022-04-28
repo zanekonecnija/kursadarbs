@@ -1,1 +1,8 @@
-Spēles noteikumi
+ĶĪMIJAS ATJAUTĪBAS TESTS
+
+Spēles noteikumi:
+
+1. Izvēlies sev nepieciešamo jautājumu skaitu.
+2. Ieraksti, tavuprāt, pareizo atbildi.
+3. Pabeidzot testu, apskaties kur esi pieļāvis kļūdu, visas pareizās atbildes var redzēt spēles beigās atbilžu lapā.
+4. Lai viss izdodas! :)
