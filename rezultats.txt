@@ -90,3 +90,11 @@ Spēle ir beigusies
 Jūs ieguvāt 1 no 1 punktiem
 Spēli paveicāt 108.1 sekundēs
 Paldies!
+Spēle ir beigusies
+Jūs ieguvāt 0 no 1 punktiem
+Spēli paveicāt 0.8 sekundēs
+Paldies!
+Spēle ir beigusies
+Jūs ieguvāt 0 no 1 punktiem
+Spēli paveicāt 1.76 sekundēs
+Paldies!
